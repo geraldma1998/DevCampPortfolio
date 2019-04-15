@@ -29,7 +29,7 @@ Things you may want to cover:
    1. Item 3a
    1. Item 3b
 
-```
+```ruby
 if @variable == 4
 	puts "Texto"
 end
