@@ -28,3 +28,8 @@ Things you may want to cover:
 1. Item 3
    1. Item 3a
    1. Item 3b
+
+
+if @variable == 4
+	puts "Texto"
+end
