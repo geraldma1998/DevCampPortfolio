@@ -23,14 +23,8 @@ Things you may want to cover:
 
 * ...
 
-1. Item 1
-1. Item 2
-1. Item 3
-   1. Item 3a
-   1. Item 3b
-
 ```ruby
-if @variable == 4
-  puts "Texto"
+if @test_github_documentation == 4
+  puts "Do nothing"
 end
 ```
