@@ -31,6 +31,6 @@ Things you may want to cover:
 
 ```ruby
 if @variable == 4
-	puts "Texto"
+  puts "Texto"
 end
 ```
