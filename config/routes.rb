@@ -11,7 +11,11 @@ Rails.application.routes.draw do
 	  resources :comments
 	end
 
-  resources :blogs, concerns: :commentable 
+  resources :blogs do
+    member do
+      post :toggle_status
+    end
+  end
   #do
   	#resources :comments
   #end
