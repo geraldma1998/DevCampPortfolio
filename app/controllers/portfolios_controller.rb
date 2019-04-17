@@ -2,7 +2,7 @@ class PortfoliosController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   def index
-	  @portfolio_items = Portfolio.all
+	  @portfolio_items = Portfolio.search_by_subtitle("Ruby on rails")
 	end
 
 	def new
@@ -13,6 +13,10 @@ class PortfoliosController < ApplicationController
 	end
 
   def show
+  end
+
+  def angular
+    @portfolio_items = Portfolio.search_by_subtitle("Angular")
   end
 
   # POST /portfolios.json

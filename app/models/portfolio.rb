@@ -14,4 +14,10 @@
 
 class Portfolio < ApplicationRecord
 	validates_presence_of :title, :body, :subtitle, :main_image, :thumb_image
+
+	def self.search_by_subtitle subtitle
+    where(subtitle: subtitle)
+	end
+
+	scope :search_ruby_on_rails_items, -> {where(subtitle: 'Ruby on rails')} 
 end

@@ -7,6 +7,9 @@
 #  body       :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  slug       :string
+#  status     :integer          default("draft")
+#  topic_id   :bigint(8)
 #
 
 class Blog < ApplicationRecord
@@ -16,6 +19,5 @@ class Blog < ApplicationRecord
 
   validates_presence_of :title, :body
 
-  has_many :comments
   belongs_to :topic
 end
