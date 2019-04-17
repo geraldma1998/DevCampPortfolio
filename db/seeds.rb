@@ -41,18 +41,14 @@ NUMBER_PORTFOLIOS.times do |portfolio_item|
   Portfolio.create!(
     title: "Portfolio title: #{portfolio_item}",
     subtitle: "Ruby on rails",
-    body: "This is the portfolio item body number #{portfolio_item}",
-    main_image: "https://via.placeholder.com/600x400",
-    thumb_image: "https://via.placeholder.com/350x200"
+    body: "This is the portfolio item body number #{portfolio_item}"
   )
 end
 
 Portfolio.create!(
     title: "Portfolio title: 10",
     subtitle: "Angular",
-    body: "This is the portfolio item body number 10",
-    main_image: "https://via.placeholder.com/600x400",
-    thumb_image: "https://via.placeholder.com/350x200"
+    body: "This is the portfolio item body number 10"
   )
 
 puts "#{NUMBER_PORTFOLIOS} portfolio items created"
