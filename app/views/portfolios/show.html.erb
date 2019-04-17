@@ -20,5 +20,9 @@
   <%= @portfolio.body %>
 </p>
 
+<% @portfolio.technologies.each do |t| %>
+	<p> <%= t.name %></p>
+<% end %>
+
 <%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
 <%= link_to 'Back', portfolios_path %>
