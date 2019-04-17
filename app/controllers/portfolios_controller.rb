@@ -2,17 +2,22 @@ class PortfoliosController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   def index
-	  @portfolio_items = Portfolio.all
-	end
+    @portfolio_items = Portfolio.all
+  end
 
-	def new
-		@portfolio_item = Portfolio.new
-	end
+  def new
+    @portfolio_item = Portfolio.new
+    3.times { @portfolio_item.technologies.build }
+  end
 
-	def edit
-	end
+  def edit
+  end
 
   def show
+  end
+
+  def angular
+    @portfolio_items = Portfolio.search_by_subtitle("Angular")
   end
 
   # POST /portfolios.json
@@ -62,6 +67,6 @@ class PortfoliosController < ApplicationController
     end
 
     def portfolio_params
-      params.require(:portfolio).permit(:title,:subtitle,:body,:main_image,:thumb_image)
+      params.require(:portfolio).permit(:title,:subtitle,:body,:main_image,:thumb_image, technologies_attributes: [:name])
     end
 end

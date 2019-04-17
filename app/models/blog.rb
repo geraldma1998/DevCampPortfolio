@@ -7,6 +7,9 @@
 #  body       :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  slug       :string
+#  status     :integer          default("draft")
+#  topic_id   :bigint(8)
 #
 
 class Blog < ApplicationRecord
@@ -14,5 +17,7 @@ class Blog < ApplicationRecord
 	extend FriendlyId
   friendly_id :title, use: :slugged
 
-  has_many :comments
+  validates_presence_of :title, :body
+
+  belongs_to :topic
 end
