@@ -3,14 +3,14 @@ class PortfoliosController < ApplicationController
 
   def index
 	  @portfolio_items = Portfolio.all
-	end
+  end
 
-	def new
-		@portfolio_item = Portfolio.new
-	end
+  def new
+	  @portfolio_item = Portfolio.new
+  end
 
-	def edit
-	end
+  def edit
+  end
 
   def show
   end
