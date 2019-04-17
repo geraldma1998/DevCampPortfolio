@@ -9,6 +9,7 @@ NUMBER_TOPICS = 3
 NUMBER_BLOGS = 10
 NUMBER_SKILLS = 9
 NUMBER_PORTFOLIOS = 11
+NUMBER_TECHNOLOGIES = 4
 
 NUMBER_TOPICS.times do |topic|
   Topic.create!(
@@ -52,3 +53,11 @@ Portfolio.create!(
   )
 
 puts "#{NUMBER_PORTFOLIOS} portfolio items created"
+
+NUMBER_TECHNOLOGIES.times do |technology|
+  Portfolio.last.technologies.create!(
+    name: "Technology number #{technology}"
+  )
+end
+
+puts "#{NUMBER_TECHNOLOGIES} technologies created"

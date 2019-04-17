@@ -2,11 +2,11 @@ class PortfoliosController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   def index
-	  @portfolio_items = Portfolio.all
+    @portfolio_items = Portfolio.all
   end
 
   def new
-	  @portfolio_item = Portfolio.new
+    @portfolio_item = Portfolio.new
   end
 
   def edit
