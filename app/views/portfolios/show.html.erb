@@ -24,5 +24,13 @@
 	<p> <%= t.name %></p>
 <% end %>
 
+<hr>
+
+<%= params.inspect %>
+
+<hr>
+
+<%= session.inspect %>
+
 <%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
 <%= link_to 'Back', portfolios_path %>
