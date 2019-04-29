@@ -13,6 +13,7 @@ class BlogsController < ApplicationController
   def show
     @page_title = @blog.title
     @seo_keywords = @blog.body
+    session[:source] = @blog.title
   end
 
   # GET /blogs/new
