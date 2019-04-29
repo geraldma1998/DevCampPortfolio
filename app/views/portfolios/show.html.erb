@@ -2,25 +2,25 @@
 
 <p>
   <strong>main_image:</strong>
-  <%= image_tag @portfolio.main_image %>
+  <%= image_tag @portfolio_item.main_image %>
 </p>
 
 <p>
   <strong>Title:</strong>
-  <%= @portfolio.title %>
+  <%= @portfolio_item.title %>
 </p>
 
 <p>
   <strong>Subtitle:</strong>
-  <%= @portfolio.subtitle %>
+  <%= @portfolio_item.subtitle %>
 </p>
 
 <p>
   <strong>Body:</strong>
-  <%= @portfolio.body %>
+  <%= @portfolio_item.body %>
 </p>
 
-<% @portfolio.technologies.each do |t| %>
+<% @portfolio_item.technologies.each do |t| %>
 	<p> <%= t.name %></p>
 <% end %>
 
@@ -32,5 +32,5 @@
 
 <%= session.inspect %>
 
-<%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
+<%= link_to 'Edit', edit_portfolio_path(@portfolio_item) %> |
 <%= link_to 'Back', portfolios_path %>
